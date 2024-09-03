@@ -17,20 +17,20 @@ public class Menu {
         Calculadora calculadora = new Calculadora();
         Scanner entrada = new Scanner(System.in);
         String opcion = "";
-        System.out.println("1. suma, 2. restar, 3. multiplicar, 4. dividir, 5. limpiar, 6. salir");
-        opcion = entrada.nextLine();  
-        double acomulado = 0;
+        
+          
+        
         while(!opcion.equals("6")){
-         
-            
+        System.out.println("1. suma, 2. restar, 3. multiplicar, 4. dividir, 5. limpiar, 6. salir");
+        opcion = entrada.nextLine();    
         if(opcion.equals("1")){
 
             System.out.println("Ingrese el numero 1: ");
             double numero1 = entrada.nextDouble();
             System.out.println("Ingrese el numero 2: ");
             double numero2 = entrada.nextDouble();
-            double resultado = acomulado + calculadora.sumar(numero1, numero2);
-            acomulado = resultado;
+            double resultado = calculadora.sumar(numero1, numero2);
+            
             System.out.println(resultado);
         }
         if(opcion.equals("2")){
@@ -38,8 +38,8 @@ public class Menu {
             double numero1 = entrada.nextDouble();
             System.out.println("Ingrese el numero 2: ");
             double numero2 = entrada.nextDouble();
-            double resultado = acomulado + calculadora.restar(numero1, numero2);
-            acomulado = resultado;
+            double resultado =  calculadora.restar(numero1, numero2);
+            
             System.out.println(resultado);
         }
         if(opcion.equals("3")){
@@ -47,8 +47,7 @@ public class Menu {
             double numero1 = entrada.nextDouble();
             System.out.println("Ingrese el numero 2: ");
             double numero2 = entrada.nextDouble();
-            double resultado = acomulado + calculadora.multiplicar(numero1, numero2);
-            acomulado = resultado;
+            double resultado =   calculadora.multiplicar(numero1, numero2);
             System.out.println(resultado);
         }
         if(opcion.equals("4")){
@@ -56,14 +55,11 @@ public class Menu {
             double numero1 = entrada.nextDouble();
             System.out.println("Ingrese el numero 2: ");
             double numero2 = entrada.nextDouble();
-            double resultado = acomulado + calculadora.dividir(numero1, numero2);
-            acomulado = resultado;
+            double resultado =  calculadora.dividir(numero1, numero2);
             System.out.println(resultado);
         }
      
-        if(opcion.equals("5")){
-            acomulado= 0;
-        }
+        
     }
         
         
