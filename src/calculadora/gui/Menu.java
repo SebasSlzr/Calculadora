@@ -5,64 +5,71 @@
 package calculadora.gui;
 import calculadora.operaciones.Calculadora;
 
- import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class Menu {
-    private Scanner teclado;
+     public static void main(String[] args) {
+        /*JFrame ventana = new JFrame("Mi primera ventana");
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventana.setSize(800, 600);
+        ventana.setLayout(null);
+        
+        JLabel etiqueta = new JLabel("Hola Mundo!", SwingConstants.CENTER);
+        etiqueta.setBounds(350,10,150,50);
+        ventana.add(etiqueta);
+        
+        ventana.setVisible(true);*/
+        
+///////////////////////////////////////////////////////////////////////////////////
 
- 
-    
-    
-    public static void main(String[] args) {
-        Calculadora calculadora = new Calculadora();
-        Scanner entrada = new Scanner(System.in);
-        String opcion = "";
+        /*JOptionPane.showInternalMessageDialog(null, "Bienvenidos a mi calculadora");
+        String nombre = JOptionPane.showInputDialog("Ingrese Su Nombre:");
+        System.out.println(nombre);
+        JOptionPane.showMessageDialog(null, "Hola: "+ nombre + " Estas en la calculadorra");
         
-          
+        int opcion = JOptionPane.showConfirmDialog(null, "Desea continuar?");
+        if(opcion == JOptionPane.YES_OPTION){
+            System.out.println("El usuario dijo que si continua");
+        }
+        if(opcion == JOptionPane.NO_OPTION){
+            System.out.println("El usuario dijo que no continua");
+        }
+        if(opcion == JOptionPane.CANCEL_OPTION){
+            System.out.println("El usuario decidio cancelar la operacion");
+        }*/
         
-        while(!opcion.equals("6")){
-        System.out.println("1. suma, 2. restar, 3. multiplicar, 4. dividir, 5. limpiar, 6. salir");
-        opcion = entrada.nextLine();    
+    Calculadora calculadora = new Calculadora();
+         
+        String opcion = JOptionPane.showInputDialog("1. suma, 2. restar, 3. multiplicar, 4. dividir");
         if(opcion.equals("1")){
-
-            System.out.println("Ingrese el numero 1: ");
-            double numero1 = entrada.nextDouble();
-            System.out.println("Ingrese el numero 2: ");
-            double numero2 = entrada.nextDouble();
-            double resultado = calculadora.sumar(numero1, numero2);
             
-            System.out.println(resultado);
+            double numero1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 1: "));
+            double numero2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 2: "));
+            double resultado = calculadora.sumar(numero1, numero2);
+            JOptionPane.showMessageDialog(null, "Resultado: "+ resultado);
+            
         }
         if(opcion.equals("2")){
-            System.out.println("Ingrese el numero 1: ");
-            double numero1 = entrada.nextDouble();
-            System.out.println("Ingrese el numero 2: ");
-            double numero2 = entrada.nextDouble();
-            double resultado =  calculadora.restar(numero1, numero2);
-            
-            System.out.println(resultado);
+            double numero1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 1: "));
+            double numero2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 2: "));
+            double resultado = calculadora.restar(numero1, numero2);
+            JOptionPane.showMessageDialog(null, "Resultado: "+ resultado);
         }
         if(opcion.equals("3")){
-            System.out.println("Ingrese el numero 1: ");
-            double numero1 = entrada.nextDouble();
-            System.out.println("Ingrese el numero 2: ");
-            double numero2 = entrada.nextDouble();
-            double resultado =   calculadora.multiplicar(numero1, numero2);
-            System.out.println(resultado);
+            double numero1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 1: "));
+            double numero2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 2: "));
+            double resultado = calculadora.multiplicar(numero1, numero2);
+            JOptionPane.showMessageDialog(null, "Resultado: "+ resultado);
         }
         if(opcion.equals("4")){
-            System.out.println("Ingrese el numero 1: ");
-            double numero1 = entrada.nextDouble();
-            System.out.println("Ingrese el numero 2: ");
-            double numero2 = entrada.nextDouble();
-            double resultado =  calculadora.dividir(numero1, numero2);
-            System.out.println(resultado);
+            double numero1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 1: "));
+            double numero2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 2: "));
+            double resultado = calculadora.dividir(numero1, numero2);
+            JOptionPane.showMessageDialog(null, "Resultado: "+ resultado);
         }
-     
+    
         
     }
-        
-        
-        
-    }
+    
 }
