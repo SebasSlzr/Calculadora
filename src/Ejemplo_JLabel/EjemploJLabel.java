@@ -26,7 +26,6 @@ public class EjemploJLabel {
         JLabel etiqueta = new JLabel("Mi calculadora");
         etiqueta.setBounds(350,10,150,50);
         ventana.add(etiqueta);
-        ventana.setVisible(true);
         
         /*String informacionJLabel = etiqueta.getText();
         System.out.println(informacionJLabel);*/
@@ -58,5 +57,6 @@ public class EjemploJLabel {
         ventana.add(combo1);
         
         
+        ventana.setVisible(true);
     }
 }
