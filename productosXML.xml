@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><productos><producto><codigo>1000000</codigo><nombre>PC</nombre><precio>3000$</precio><categoria>Electronica</categoria></producto>
+
+<producto>
+<codigo>2000000</codigo>
+<nombre>Anillo</nombre>
+<precio>2500$</precio>
+<categoria>Joyeria</categoria>
+</producto>
+
+</productos>
+
